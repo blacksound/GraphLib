@@ -1,6 +1,7 @@
 VTMAbstractEdge {
 	var <from;
 	var <to;
+	var <>weight;
 
 	*new{arg from, to;
 		^super.new.init(from, to);
