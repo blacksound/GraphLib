@@ -14,4 +14,8 @@ VTMAbstractEdge {
 			to = VTMAbstractVertex(to_);
 		});
 	}
+
+	isLoop{
+		^from == to;
+	}
 }
