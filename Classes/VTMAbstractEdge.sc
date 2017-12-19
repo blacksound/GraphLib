@@ -20,6 +20,10 @@ VTMAbstractEdge {
 		^from == to;
 	}
 
+	isLink{
+		^this.isLoop.not;
+	}
+
 	reversed{
 		^this.class.new(to, from);
 	}
