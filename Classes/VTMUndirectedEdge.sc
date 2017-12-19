@@ -1,0 +1,3 @@
+VTMUndirectedEdge : VTMAbstractEdge {
+
+}

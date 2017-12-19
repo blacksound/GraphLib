@@ -1,0 +1,4 @@
+VTMDirectedEdge : VTMAbstractEdge {
+
+
+}

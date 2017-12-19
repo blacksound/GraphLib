@@ -19,4 +19,8 @@ VTMAbstractEdge {
 	isLoop{
 		^from == to;
 	}
+
+	reversed{
+		^this.class.new(to, from);
+	}
 }
