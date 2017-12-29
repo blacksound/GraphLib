@@ -1,0 +1,3 @@
+VTMUndirectedIdentityGraph : VTMUndirectedGraph {
+	*itemsClass{ ^IdentitySet; }
+}

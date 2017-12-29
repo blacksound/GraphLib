@@ -1,0 +1,3 @@
+VTMDirectedIdentityGraph : VTMDirectedGraph {
+	*itemsClass{ ^IdentitySet; }
+}
