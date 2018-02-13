@@ -3,15 +3,27 @@ VTMGraphEdge.test;
 VTMGraphVertex.test;
 VTMGraphPath.test
 
-(111 --> 222 --> 333) --> 444
-(111 --> 222 --> 333) --- 444
-(111 --> 222 --> 333) --> (444 --> 555)
-(111 --- 222 --- 333) --- (444 --- 555)
-(111 --> 222 --> 333) --> (444 --> 555 --> 666)
-(111 --- 222 --- 333) --- (444 --- 555 --- 666)
-(111 --> 222 --> 333) ++ 444
-(111 --> 222 --> 333) ++ 444
-(111 --> 222 --> 333) ++ (444 --> 555)
-(111 --- 222 --- 333) ++ (444 --- 555)
-(111 --> 222 --> 333) ++ (444 --> 555 --> 666)
-(111 --- 222 --- 333) ++ (444 --- 555 --- 666)
+a = VTMGraph.generateRandom;
+
+(
+	a = VTMDirectedGraph();
+	[\u, \v, \w, \x, \y, \z].do{arg item;
+		a.addVertex(item);
+	};
+	a.addEdge(\u --> \v);
+	a.addEdge(\u --> \x);
+	a.addEdge(\x --> \v);
+	a.addEdge(\v --> \y);
+	a.addEdge(\y --> \x);
+	a.addEdge(\w --> \y);
+	a.addEdge(\w --> \x);
+)
+a.vertices
+a.edges
+a.dfs.do({arg item; item.postln;})
+
+
+a = \aaa --> [\bbb, \xxx] --> \ccc
+b = a.asStream
+
+b.next

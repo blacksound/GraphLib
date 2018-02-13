@@ -203,8 +203,13 @@ VTMGraph{
 	}
 
 	dfs{arg onVertexDiscovery, onVertexFinish;
+		var result;
 		if(dataDirty, {this.buildData;});
-		^data.dfs;
+		result = data.dfs;
+		//also label the edge types based on the dfs forest
+		
+
+		^result;
 	}
 
 	bfs{}

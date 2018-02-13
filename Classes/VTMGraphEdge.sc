@@ -5,6 +5,10 @@ VTMGraphEdge {
 	var <>weight;
 	var <>obj;
 
+	//the edge type is set by the graph after dfs
+	//Symbols: \tree, \back, \forward, \cross
+	var <>type;
+
 	*new{arg from, to, label;
 		^super.newCopyArgs(from, to, label);
 	}

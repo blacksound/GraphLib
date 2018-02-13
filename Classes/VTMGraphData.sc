@@ -20,7 +20,12 @@ VTMGraphData {
 				var time = 0;
 				var visit;
 				vertexMappings.keys.do({arg item;
-					result.put(item, (color: \white, vertex: item));
+					result.put(item,
+						(
+							color: \white,
+							vertex: item
+						)
+					);
 				});
 				visit = {arg item;
 					var adj;
