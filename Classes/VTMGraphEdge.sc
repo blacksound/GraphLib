@@ -20,12 +20,10 @@ VTMGraphEdge {
 	*expandAdjacencyList{arg list;
 		var result = [];
 		list.do({arg item;
-			if(item.to.isKindOf(Collection), {
 			if(item.to.isKindOf(SequenceableCollection), {
 				item.to.do({arg jtem;
 					result = result.add(this.new(item.from, jtem));
 				});
-			}, { 
 			}, {
 				result = result.add(this.new(item.from, item.to));
 			});
@@ -67,7 +65,6 @@ VTMGraphEdge {
 
 	asSet{ ^Set[from, to]; }
 
-	reverse{ ^this.class.new(to, from); } 
 	reverse{ ^this.class.new(to, from); }
 
 	isBridge{}
