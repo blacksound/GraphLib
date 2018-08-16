@@ -21,6 +21,7 @@ VTMGraphEdge {
 		var result = [];
 		list.do({arg item;
 			if(item.to.isKindOf(Collection), {
+			if(item.to.isKindOf(SequenceableCollection), {
 				item.to.do({arg jtem;
 					result = result.add(this.new(item.from, jtem));
 				});
