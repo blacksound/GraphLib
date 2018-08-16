@@ -26,6 +26,7 @@ VTMGraphEdge {
 					result = result.add(this.new(item.from, jtem));
 				});
 			}, { 
+			}, {
 				result = result.add(this.new(item.from, item.to));
 			});
 		});
@@ -67,6 +68,7 @@ VTMGraphEdge {
 	asSet{ ^Set[from, to]; }
 
 	reverse{ ^this.class.new(to, from); } 
+	reverse{ ^this.class.new(to, from); }
 
 	isBridge{}
 }
