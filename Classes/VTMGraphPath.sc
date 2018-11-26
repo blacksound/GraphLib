@@ -64,7 +64,7 @@ VTMGraphPath{
 	vertices{ ^edges.collect({arg item; item.from}) ++ this.end; }
 
 	asPattern{arg repeats = 1;
-		^Prout({arg ...args; 
+		^Prout({arg ...args;
 			var start, end, items, str;
 			var val, prev, step = 0;
 			items = this.vertices;
