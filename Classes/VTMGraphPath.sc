@@ -73,7 +73,7 @@ VTMGraphPath{
 			end = items.last;
 			loop{
 				val = str.next;
-				"Parent thread: %".format(thisThread.parent).postln;
+				// "Parent thread: %".format(thisThread.parent).postln;
 				if(val.notNil, {
 					if( prev.isNil, {
 						thisThread.changed(\start, val);
