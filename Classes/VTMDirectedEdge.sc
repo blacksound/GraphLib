@@ -10,4 +10,7 @@ VTMDirectedEdge : VTMGraphEdge {
 
 	hash{ ^this.instVarHash([\from, \to]); }
 
+	asPattern{
+		^VTMGraphPath.newFromVertices([from, to]).asPattern;
+	}
 }
